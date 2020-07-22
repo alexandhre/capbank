@@ -18,8 +18,20 @@ composer dump-autoload
 # povoando banco de dados
 php artisan db:seed
 
+#gerar env e key do projeto
+cp .env.example .env
+php artisan key:generate
+
+#excluir as configurações de DataBase do env:
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=homestead
+DB_USERNAME=homestead
+DB_PASSWORD=secret
+
 # startando servidor
-php artisan serve --port88
+php artisan serve --port=88
 
 # Para instalar a site em vuejs:
 cd capbank/app-capbank

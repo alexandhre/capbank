@@ -8,7 +8,16 @@ composer install
 php artisan migrate:fresh
 composer dump-autoload
 php artisan db:seed
-php artisan serve --port88
+cp .env.example .env
+php artisan key:generate
+* Excluir as configurações de DataBase do env:
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=homestead
+DB_USERNAME=homestead
+DB_PASSWORD=secret
+php artisan serve --port=88
 ```
 ### Requisitos
 O que você precisa para executar este aplicativo:
