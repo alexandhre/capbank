@@ -8,7 +8,7 @@ composer install
 php artisan migrate:fresh
 composer dump-autoload
 php artisan db:seed
-php artisan serve
+php artisan serve --port88
 ```
 ### Requisitos
 O que você precisa para executar este aplicativo:

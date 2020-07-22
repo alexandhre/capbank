@@ -19,7 +19,7 @@ composer dump-autoload
 php artisan db:seed
 
 # startando servidor
-php artisan serve
+php artisan serve --port88
 
 # Para instalar a site em vuejs:
 cd capbank/app-capbank
