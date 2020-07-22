@@ -49,7 +49,8 @@ export default {
     StatsCard,
     PaperTable
   },  
-  created() {          
+  created() {
+    tableData.splice(0, tableData.length);         
     axios
       .get('http://127.0.0.1:88/conta')
       .then(response => {
